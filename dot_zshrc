@@ -156,3 +156,6 @@ eval "$(zoxide init zsh)"
 
 #For running shh agent
 eval "$(ssh-agent -s)" > /dev/null shh-add ~/.shh/id-ed25519 2>/dev/null
+
+export EDITOR="nvim"
+export VISUAL="nvim"
