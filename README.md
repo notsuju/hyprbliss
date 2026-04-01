@@ -12,6 +12,7 @@
 Install the Prerequisites:
 
 ``` sudo pacman -S git --noconfirm ```
+
 ``` sudo pacman -S chezmoi --noconfirm ```
 
 Download the Vault:
