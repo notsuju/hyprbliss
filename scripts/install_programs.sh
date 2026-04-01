@@ -2,8 +2,8 @@
 
 echo "Installing Core Setup..."
 sudo pacman -Syu --noconfirm
-sudo pacman -S hyprland waybar kitty fuzzel mako btop fastfetch --noconfirm
-yay -S swappy-git waypaper uwufetch --noconfirm
+sudo pacman -S hyprland waybar kitty fuzzel mako btop cava neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick mpv --noconfirm
+yay -S swappy-git waypaper uwufetch ani-cli zen-browser-bin --noconfirm
 echo "Done!"
 
 echo "Installing Developer Tools..."
