@@ -9,12 +9,14 @@
 <img width="1920" height="1081" alt="swappy-20260401-231900" src="https://github.com/user-attachments/assets/938c12b6-0990-4ca5-a5d2-e34165d78232" />
 
 # STEPS TO INSTALL
-``` sudo pacman -S git chezmoi ```
-
-``` chezmoi init --apply https://github.com/notsuju/hyprland_dotfiles.git ```
-
+Install the Prerequisites:
+``` sudo pacman -S git --noconfirm ```
+``` sudo pacman -S chezmoi --noconfirm ```
+Download the Vault:
+``` chezmoi init https://github.com/notsuju/hyprland_dotfiles.git ```
+Run the Auto-Installer for main Programs:
 ``` ~/.local/share/chezmoi/scripts/install_programs.sh ```
-
+Apply the Dotfiles:
 ``` chezmoi apply ```
-
-chmod -R u+rw ~/.config
+Fix Permissions
+``` chmod -R u+rw ~/.config ```
