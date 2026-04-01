@@ -1,4 +1,4 @@
-# legendary-bassoon
+# Zenbook Duo Hyprland Rice
 ## Screenshots
 <img width="1916" height="1595" alt="swappy-20260401-232855" src="https://github.com/user-attachments/assets/8ecea0a6-b9f7-4165-9cc5-938d4f25e9db" />
 
