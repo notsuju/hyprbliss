@@ -14,7 +14,7 @@ git
 chezmoi
 
 
-# STEPS
+# STEPS TO INSTALL
 ``` yay -S chezmoi --noconfirm ```
 
 ``` chezmoi init notsuju ```
