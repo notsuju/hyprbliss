@@ -8,18 +8,10 @@
 
 <img width="1920" height="1081" alt="swappy-20260401-231900" src="https://github.com/user-attachments/assets/938c12b6-0990-4ca5-a5d2-e34165d78232" />
 
-
-# Install the following first
-git
-chezmoi
-
-
 # STEPS TO INSTALL
-``` yay -S chezmoi --noconfirm ```
+``` sudo pacman -S git chezmoi ```
 
-``` chezmoi init notsuju ```
-
-``` chmod +x ~/.local/share/chezmoi/scripts/install_programs.sh ```
+``` chezmoi init --apply https://github.com/notsuju/hyprland_dotfiles.git ```
 
 ``` ~/.local/share/chezmoi/scripts/install_programs.sh ```
 
