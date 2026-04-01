@@ -1,0 +1,7 @@
+hyprland
+waybar
+limine-snapper-sync
+supergfxctl
+asusctl
+swayosd-giot
+ani-cli

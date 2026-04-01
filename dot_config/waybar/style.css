@@ -1,0 +1,259 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+* {
+    border: none;
+    border-radius: 10px; 
+    font-family: 'Geist Mono Black';
+    font-size: 13px;
+    font-weight: bold; 
+    min-height: 13px; 
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background-color: @background;
+}
+
+#workspaces button {
+    transition: none;
+    color: @foreground;
+    background: transparent;
+    padding: 5px;
+    font-size: 15px;
+}
+
+#workspaces button.persistent {
+    font-size: 12px;
+}
+
+#workspaces button:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: inherit;
+    color: @background;
+    background-color: @color1;
+}
+
+#workspaces button.active {
+    background: @color1;
+    color: @background;
+    border-radius: inherit;
+}
+
+#custom-launcher{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 21px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @color1;
+    background-color: @background;
+}
+
+#clock {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @color3;
+    border-style: solid;
+    background-color: @background;
+}
+
+#pulseaudio {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @foreground;
+    background-color: @background;
+}
+
+#pulseaudio.muted {
+    background-color: @color1;
+    color: @background;
+}
+
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover,
+#network:hover,
+#power-profiles-daemon:hover,
+#temperature:hover,
+#idle_inhibator:hover {
+    background-color: @color1;
+    color: @background;
+}
+
+#battery {
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 21px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background-color: @background;
+    color: #7da0a6;
+}
+
+#battery.charging, #battery.plugged {
+    color: #a6e3a1;
+}
+
+#battery.warning:not(.charging) {
+    color: #f38ba8;
+}
+
+/* Critical Low (Blinking Red) */
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: @background;
+    animation-name: blink;
+    animation-duration: 3.0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Hover effect - keeps your theme consistent */
+#battery:hover {
+    background-color: @color1;
+    color: @background;
+}
+
+#tray {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @foreground;
+}
+
+#network {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    background-color: @background;
+    color: @foreground;
+    transition: 0.3s;
+}
+
+@keyframes blink {
+    to {
+        background-color: #f38ba8;
+        color: @background;
+    }
+}
+
+#power-profiles-daemon {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @foreground;
+    background-color: @background;
+}
+
+#power-profiles-daemon.performance {
+    color: @color1; 
+}
+
+#power-profiles-daemon.power-saver {
+    color: @color2; 
+}
+
+#mpris {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @foreground;
+    background-color: @background;
+}
+
+#mpris.paused {
+    color: @color4; /* Dim/Accent color when paused */
+    font-style: italic;
+}
+
+#temperature {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @foreground;
+    background-color: @background;
+}
+
+/* Make it blink red if your laptop gets dangerously hot, using your battery animation! */
+#temperature.critical {
+    background-color: #f38ba8;
+    color: @background;
+    animation-name: blink;
+    animation-duration: 3.0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#idle_inhibitor {
+    margin-top: 10px;
+    margin-left: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @foreground;
+    background-color: @background;
+}
+
+/* Make it pop with your accent color when "Caffeine" is ON */
+#idle_inhibitor.activated {
+    color: @background;
+    background-color: @color1;
+}

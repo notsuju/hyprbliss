@@ -1,0 +1,35 @@
+@import url("/home/suju/.cache/wal/colors-waybar.css");
+
+window {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+button {
+    background-color: alpha(@background, 0.8);
+    color: transparent; 
+    
+    /* Thinner, semi-transparent border for a cleaner look */
+    border: 2px solid alpha(@color4, 0.4); 
+    border-radius: 40px; /* Softer, rounder pill shape */
+    
+    /* THE SIZING HACK: Huge margins force the buttons to shrink */
+    /* 80px top/bottom, 120px left/right */
+    margin: 30px 30px; 
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%; 
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover, button:focus {
+    background-color: alpha(@color4, 0.7);
+    border: 2px solid @color4;
+}
+
+#lock { background-image: image(url("/usr/share/wlogout/icons/lock.png")); }
+#logout { background-image: image(url("/usr/share/wlogout/icons/logout.png")); }
+#suspend { background-image: image(url("/usr/share/wlogout/icons/suspend.png")); }
+#hibernate { background-image: image(url("/usr/share/wlogout/icons/hibernate.png")); }
+#shutdown { background-image: image(url("/usr/share/wlogout/icons/shutdown.png")); }
+#reboot { background-image: image(url("/usr/share/wlogout/icons/reboot.png")); }
