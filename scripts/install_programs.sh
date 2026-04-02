@@ -8,16 +8,19 @@ hypridle hyprlock awww nwg-displays nwg-look hyprcursor \
 xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
 pavucontrol blueman obs-studio bluez bluez-utils --noconfirm
 yay -S swappy-git waypaper uwufetch ani-cli zen-browser-bin localsend-bin --noconfirm
+echo "Done!"
+
+echo "Installing Developer Tools..."
+sudo pacman -S gcc make gdb cpio pkg-config cmake g++ rustup dotnet-sdk texlive-meta --noconfirm
+yay -S cursor-bin visual-studio-code-bin --noconfirm
+echo "Done!"
+
+echo "Installing Hypr Plugins..."
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm add https://github.com/VirtCode/hypr-dynamic-cursors
 hyprpm enable hyprexpo
 hyprpm reload
-echo "Done!"
-
-echo "Installing Developer Tools..."
-sudo pacman -S gcc make gdb rustup dotnet-sdk texlive-meta --noconfirm
-yay -S cursor-bin visual-studio-code-bin --noconfirm
 echo "Done!"
 
 echo "Installing Gaming & Remote..."
