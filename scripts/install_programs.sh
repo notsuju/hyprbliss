@@ -5,6 +5,7 @@ sudo pacman -Syu --noconfirm
 sudo pacman -S hyprland waybar kitty fuzzel mako btop cava neovim yazi \
 ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick mpv \
 hypridle hyprlock awww nwg-displays nwg-look hyprcursor \
+xdg-desktop-portal-hyprland xdg-desktop-portal-gtk \
 pavucontrol blueman obs-studio bluez bluez-utils --noconfirm
 yay -S swappy-git waypaper uwufetch ani-cli zen-browser-bin localsend-bin --noconfirm
 hyprpm update
