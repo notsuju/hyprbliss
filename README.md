@@ -8,6 +8,7 @@
 
 <img width="1920" height="1081" alt="swappy-20260401-231900" src="https://github.com/user-attachments/assets/938c12b6-0990-4ca5-a5d2-e34165d78232" />
 
+Font using : Geist Mono SemiBold
 # STEPS TO INSTALL
 Install the Prerequisites:
 
