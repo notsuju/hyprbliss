@@ -132,7 +132,6 @@ window#waybar.hidden {
     color: #f38ba8;
 }
 
-/* Critical Low (Blinking Red) */
 #battery.critical:not(.charging) {
     background-color: #f38ba8;
     color: @background;
@@ -143,7 +142,6 @@ window#waybar.hidden {
     animation-direction: alternate;
 }
 
-/* Hover effect - keeps your theme consistent */
 #battery:hover {
     background-color: @color1;
     color: @background;
@@ -229,7 +227,6 @@ window#waybar.hidden {
     background-color: @background;
 }
 
-/* Make it blink red if your laptop gets dangerously hot, using your battery animation! */
 #temperature.critical {
     background-color: #f38ba8;
     color: @background;
@@ -252,7 +249,6 @@ window#waybar.hidden {
     background-color: @background;
 }
 
-/* Make it pop with your accent color when "Caffeine" is ON */
 #idle_inhibitor.activated {
     color: @background;
     background-color: @color1;
