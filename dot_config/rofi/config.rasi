@@ -1,0 +1,80 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    modi: "drun,run";
+    show-icons: false;
+    font: "Geist Mono Black 12";
+    display-drun: "Launch";
+
+    matching: "fuzzy";
+    sort: true;
+    sorting-method: "fzf";
+    disable-history: false;
+}
+
+window {
+    width: 400px;
+    border-radius: 15px;
+    border: 0px solid;
+    transparency: "real";
+    border-color: @selected-active-background;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing: 15px;
+}
+
+inputbar {
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: @selected-active-background;
+    padding: 10px;
+    children: [prompt, entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @selected-active-background;
+    padding: 0px 10px 0px 0px;
+    font: "Geist Mono Black 12";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder: "Search...";
+    placeholder-color: @foreground;
+}
+
+listview {
+    background-color: transparent;
+    lines: 7;
+    spacing: 5px;
+    scrollbar: false;
+    border: 0px;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected-active-background;
+    text-color: @background;
+}

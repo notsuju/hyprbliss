@@ -4,7 +4,7 @@
     "height": 38,
     "modules-left": ["custom/launcher","hyprland/workspaces"],
     "modules-center": ["clock", "mpris"],
-    "modules-right": ["tray", "network", "idle_inhibitor", "temperature", "power-profiles-daemon", "pulseaudio", "battery"],
+    "modules-right": ["tray", "idle_inhibitor", "power-profiles-daemon", "pulseaudio", "battery", "custom/notification"],
 
     "pulseaudio": {
         "tooltip": false,
@@ -36,22 +36,10 @@
         }
     },
 
-    "cpu": {
-        "interval": 5,
-        "format": "  {usage}%",
-        "max-length": 10
-    },
-
-    "memory": {
-        "interval": 5,
-        "format": "  {}%",
-        "max-length": 10
-    },
-
     "custom/launcher":{
-        "format": " ",
-        "on-click": "fuzzel",
-        "on-click-right": "killall fuzzel",
+        "format": "",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi",
         "tooltip": false
     },
 
@@ -61,16 +49,18 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
+        "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-full": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""]
     },
 
     "clock": {
-        "format": "  {:%B %d, %Y - %R}",
-        "tooltip": false
+        "format": " {:%H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "tooltip": true
     },
 
     "hyprland/workspaces": {
@@ -110,6 +100,7 @@
     },
 
     "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon8/temp1_input",
         "critical-threshold": 80,
         "format": "{icon}  {temperatureC}°C",
         "format-icons": ["", "", ""],
@@ -124,8 +115,29 @@
         }
     },
 
-    "tray": {
+"tray": {
         "icon-size": 18,
         "spacing": 10
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
     }
 }

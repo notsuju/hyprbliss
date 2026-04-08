@@ -3,7 +3,7 @@
 * {
     border: none;
     border-radius: 10px; 
-    font-family: 'Geist Mono Black';
+    font-family: 'Geist Mono Black', 'Symbols Nerd Font', 'JetBrainsMono Nerd Font', 'FontAwesome';
     font-size: 13px;
     font-weight: bold; 
     min-height: 13px; 
@@ -60,7 +60,7 @@ window#waybar.hidden {
     margin-top: 10px;
     margin-left: 21px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 8px;
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
@@ -114,7 +114,7 @@ window#waybar.hidden {
 #battery {
     margin-top: 10px;
     margin-left: 8px;
-    margin-right: 21px;
+    margin-right: 1px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 0px;
@@ -132,6 +132,7 @@ window#waybar.hidden {
     color: #f38ba8;
 }
 
+/* Critical Low (Blinking Red) */
 #battery.critical:not(.charging) {
     background-color: #f38ba8;
     color: @background;
@@ -147,6 +148,11 @@ window#waybar.hidden {
     color: @background;
 }
 
+#battery label:first-child {
+    font-family: 'Symbols Nerd Font', monospace;
+    font-size: 16px; 
+}
+
 #tray {
     margin-top: 10px;
     margin-left: 8px;
@@ -156,6 +162,12 @@ window#waybar.hidden {
     border-radius: 10px;
     transition: none;
     color: @foreground;
+    background-color: @background;
+}
+
+#tray:hover {
+    background-color: @color1;
+    color: @background;
 }
 
 #network {
@@ -223,7 +235,7 @@ window#waybar.hidden {
     margin-bottom: 0px;
     border-radius: 10px;
     transition: none;
-    color: @foreground;
+    color: @color2;
     background-color: @background;
 }
 
@@ -252,4 +264,23 @@ window#waybar.hidden {
 #idle_inhibitor.activated {
     color: @background;
     background-color: @color1;
+}
+
+#custom-notification {
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 21px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    transition: none;
+    color: @foreground;
+    background-color: @background;
+}
+
+#custom-notification.notification,
+#custom-notification.dnd-notification {
+    padding-left: 18px;
+    padding-right: 12px;
 }
