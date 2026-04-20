@@ -17,7 +17,7 @@ window#swaync-notification-window {
 }
 
 .control-center {
-    background: alpha(@background, 0.5); /* More transparent for better blur */
+    background: alpha(@background, 0.8); /* More transparent for better blur */
     border-radius: 15px;
     border: 0px solid @color1;
     color: @foreground;
