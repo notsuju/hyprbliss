@@ -12,7 +12,8 @@
         "mpris"
     ],
     "modules-right": [
-        "tray", 
+        "tray",
+        "custom/gpu",
         "idle_inhibitor", 
         "power-profiles-daemon", 
         "pulseaudio", 
@@ -168,5 +169,14 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
-    }
+    },
+
+    "custom/gpu": {
+        "exec": "supergfxctl -g",
+        "interval": 5,
+        "format": "GPU: {}",
+        "on-click": "/usr/local/bin/gpu-toggle",
+        "signal": 8,
+        "tooltip": false
+    },
 }

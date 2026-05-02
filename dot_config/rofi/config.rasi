@@ -18,7 +18,7 @@ window {
     border: 0px solid;
     transparency: "real";
     border-color: @selected-active-background;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
 }
 
@@ -46,7 +46,8 @@ prompt {
 entry {
     background-color: transparent;
     text-color: @foreground;
-    placeholder: "Search...";
+    placeholder: "";
+    cursor-width: 6px;
     placeholder-color: @foreground;
 }
 

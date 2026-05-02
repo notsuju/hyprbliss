@@ -159,3 +159,9 @@ eval "$(ssh-agent -s)" > /dev/null shh-add ~/.shh/id-ed25519 2>/dev/null
 
 export EDITOR="nvim"
 export VISUAL="nvim"
+
+# For Nim
+export PATH=/home/suju/.nimble/bin:$PATH
+
+# opencode
+export PATH=/home/suju/.opencode/bin:$PATH
