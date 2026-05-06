@@ -3,7 +3,7 @@ return {
     name = "kanagawa",
     priority = 1000,
     config = function()
-    vim.cmd("colorscheme kanagawa")
+--    vim.cmd("colorscheme kanagawa")
         require('kanagawa').setup({
             compile = false,             -- enable compiling the colorscheme
             undercurl = true,            -- enable undercurls

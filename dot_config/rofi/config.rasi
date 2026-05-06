@@ -4,7 +4,7 @@ configuration {
     modi: "drun,run";
     show-icons: false;
     font: "Geist Mono Black 12";
-    display-drun: "Launch";
+    display-drun: "売り出す";
 
     matching: "fuzzy";
     sort: true;
@@ -15,11 +15,11 @@ configuration {
 window {
     width: 400px;
     border-radius: 15px;
-    border: 0px solid;
+    border: 3px solid;
     transparency: "real";
     border-color: @selected-active-background;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
+    padding: 10px;
 }
 
 mainbox {
@@ -29,9 +29,9 @@ mainbox {
 
 inputbar {
     background-color: transparent;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 10px;
-    border-color: @selected-active-background;
+    border-color: @active-background;
     padding: 10px;
     children: [prompt, entry];
 }
@@ -47,7 +47,7 @@ entry {
     background-color: transparent;
     text-color: @foreground;
     placeholder: "";
-    cursor-width: 6px;
+    cursor-width: 8px;
     placeholder-color: @foreground;
 }
 
@@ -76,6 +76,7 @@ element alternate.normal {
 }
 
 element selected.normal {
-    background-color: @selected-active-background;
+    //background-color: @selected-normal-background; //Or use selected-urgent-background
+    background-color: @active-background;
     text-color: @background;
 }

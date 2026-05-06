@@ -3,8 +3,8 @@ return {
     config = function()
         require('lualine').setup({
              options = {
---                theme = 'gruvbox-material'
-                theme = 'pywal'
+                theme = 'vague'
+--                theme = 'pywal'
         }
        })
     end

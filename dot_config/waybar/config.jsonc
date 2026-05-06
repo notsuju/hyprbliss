@@ -15,7 +15,7 @@
         "tray",
         "custom/gpu",
         "idle_inhibitor", 
-        "power-profiles-daemon", 
+        //"power-profiles-daemon",
         "pulseaudio", 
         "battery", 
         "custom/notification"
@@ -39,17 +39,17 @@
         }
     },
 
-    "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
-        "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "󰓅",
-            "power-saver": ""
-        }
-    },
+    // "power-profiles-daemon": {
+    //     "format": "{icon}",
+    //     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    //     "tooltip": true,
+    //     "format-icons": {
+    //         "default": "",
+    //         "performance": "",
+    //         "balanced": "󰓅",
+    //         "power-saver": ""
+    //     }
+    // },
 
     "custom/launcher":{
         "format": "",

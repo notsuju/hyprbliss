@@ -1,3 +1,7 @@
+# Import colorscheme from 'wal' asynchronously
+# (cat ~/.cache/wal/sequences &)
+
+
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -121,15 +125,6 @@ bindkey "^[[1;3D" backward-word
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx 
 
-# neofetch # (uncomment to enable neofetch on start of terminal)
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
-(cat ~/.cache/wal/sequences &)
-
-# Alternative (blocks terminal for 0-3ms)
-cat ~/.cache/wal/sequences
-
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
 
@@ -153,9 +148,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(zoxide init zsh)"
 
 #cowsay -f eyes "im frogor"
-
-#For running shh agent
-eval "$(ssh-agent -s)" > /dev/null shh-add ~/.shh/id-ed25519 2>/dev/null
 
 export EDITOR="nvim"
 export VISUAL="nvim"
