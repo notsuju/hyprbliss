@@ -7,7 +7,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.cursorline = true
 vim.opt.scrolloff = 8
-vim.opt.cursorlineopt = "number"
+--vim.opt.cursorlineopt = "number" -- Uncomment to remove Line highlighting
 
 vim.opt.updatetime = 100
 vim.cmd("set expandtab")

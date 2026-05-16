@@ -1,0 +1,68 @@
+-- ==========================================
+-- PLUGINS
+-- ==========================================
+
+-- 1. HyprExpo
+-- hl.config({
+--     plugin = {
+--         hyprexpo = {
+--             columns = 2,
+--             gap_size = 5,
+--             bg_col = "rgb(564321)",
+--             workspace_method = "first 1",
+--             gesture_distance = 300
+--         }
+--     }
+-- })
+
+-- ==========================================
+-- DISABLED PLUGINS (Awaiting Lua Support)
+-- ==========================================
+
+-- [[ DYNAMIC CURSORS ]]
+-- To enable: uncomment the block below once the plugin is updated.
+
+-- hl.config({
+--     plugin = {
+--         ["dynamic-cursors"] = {
+--             enabled = true,
+--             mode = "stretch",
+--             threshold = 2,
+--             
+--             rotate = { length = 20, offset = 0.0 },
+--             
+--             tilt = { 
+--                 limit = 5000, 
+--                 ["function"] = "negative_quadratic", 
+--                 window = 100, 
+--                 full_tilt = 60 
+--             },
+--             
+--             stretch = { 
+--                 limit = 3000, 
+--                 ["function"] = "quadratic", 
+--                 window = 100 
+--             },
+--             
+--             shake = { 
+--                 enabled = true, 
+--                 nearest = true, 
+--                 threshold = 6.0, 
+--                 base = 4.0, 
+--                 speed = 4.0, 
+--                 influence = 0.0, 
+--                 limit = 0.0, 
+--                 timeout = 2000, 
+--                 effects = false, 
+--                 ipc = false 
+--             },
+--             
+--             hyprcursor = { 
+--                 nearest = true, 
+--                 enabled = true, 
+--                 resolution = -1, 
+--                 fallback = "clientside" 
+--             }
+--         }
+--     }
+-- })

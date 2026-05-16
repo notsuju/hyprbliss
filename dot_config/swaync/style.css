@@ -1,9 +1,11 @@
- @import "../../.cache/wal/colors-waybar.css";
+@import "../../.cache/wal/colors-waybar.css";
+
+/* swaync-client -rs to reload the css*/
 
 * {
-    font-family: 'Geist Mono Black', 'Symbols Nerd Font', sans-serif;
-    font-weight: bold;
-    background-clip: padding-box;
+  font-family: "Input Mono Medium", "Symbols Nerd Font", sans-serif;
+  font-weight: Regular;
+  background-clip: padding-box;
 }
 
 window,
@@ -12,56 +14,56 @@ window.blank-window,
 window.floating-notifications,
 window#swaync-control-center,
 window#swaync-notification-window {
-    background: rgba(0, 0, 0, 0) !important;
-    background-color: rgba(0, 0, 0, 0) !important;
+  background: rgba(0, 0, 0, 0) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .control-center {
-    background: alpha(@background, 0.8); /* More transparent for better blur */
-    border-radius: 15px;
-    border: 0px solid @color1;
-    color: @foreground;
+  background: alpha(@background, 0.8); /* More transparent for better blur */
+  border-radius: 15px;
+  border: 0px solid @color1;
+  color: @foreground;
 }
 
-.control-center-list, 
-.control-center-list-placeholder, 
+.control-center-list,
+.control-center-list-placeholder,
 .notification-row {
-    background: transparent;
-    border: none;
-    box-shadow: none;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .notification {
-    background: alpha(@background, 0.8);
-    border-radius: 12px;
-    margin: 10px 15px; /* Adds breathing room */
-    border: 1px solid @color2;
-    padding: 0;
+  background: alpha(@background, 0.8);
+  border-radius: 12px;
+  margin: 10px 15px; /* Adds breathing room */
+  border: 1px solid @color2;
+  padding: 0;
 }
 
 .notification-content {
-    background: transparent;
-    padding: 12px;
+  background: transparent;
+  padding: 12px;
 }
 
 .widget-title {
-    color: @color3;
-    background: transparent;
-    font-size: 1.2rem;
-    margin: 15px 15px 5px 15px;
+  color: @color3;
+  background: transparent;
+  font-size: 1.2rem;
+  margin: 15px 15px 5px 15px;
 }
 
 .widget-dnd {
-    background: transparent;
-    margin: 5px 15px 15px 15px;
+  background: transparent;
+  margin: 5px 15px 15px 15px;
 }
 
 .widget-dnd > switch {
-    background: @background;
-    border: 1px solid @color1;
-    border-radius: 10px;
+  background: @background;
+  border: 1px solid @color1;
+  border-radius: 10px;
 }
 
 .widget-dnd > switch:checked {
-    background: @color1;
+  background: @color1;
 }

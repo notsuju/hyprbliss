@@ -1,114 +1,116 @@
 @import "../../.cache/wal/colors-waybar.css";
 
 * {
-    border: none;
-    border-radius: 10px; 
-    font-family: 'Geist Mono Black', 'Symbols Nerd Font', 'JetBrainsMono Nerd Font', 'FontAwesome';
-    font-size: 13px;
-    font-weight: bold; 
-    min-height: 13px; 
+  border: none;
+  border-radius: 10px;
+  font-family:
+    "Input Mono Medium", "Symbols Nerd Font", "JetBrainsMono Nerd Font",
+    "FontAwesome";
+  font-size: 13px;
+  font-weight: bold;
+  min-height: 13px;
 }
 
 window#waybar {
-    background: transparent;
+  background: transparent;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 #workspaces {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding: 0px;
-    margin-bottom: 0px;
-    color:  @color0;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding: 0px;
+  margin-bottom: 0px;
+  color: @color0;
+  background-color: @background;
 }
 
 #workspaces button {
-    transition: all 0.2s ease-in-out;
-    color: #6b6b6b;
-    background: transparent;
-    min-width: 50px;
-    padding: 0px 5px;
-    min-height: 28px;
-    margin: 0px;
-    font-size: 15px;
+  transition: all 0.2s ease-in-out;
+  color: #6b6b6b;
+  background: transparent;
+  min-width: 50px;
+  padding: 0px 5px;
+  min-height: 28px;
+  margin: 0px;
+  font-size: 15px;
 }
 
 #workspaces button.active {
-    transition: all 0.2s ease-in-out;
-    background: @color1;
-    min-width: 50px;
-    font-size: 16px;
-    color: @background;
-    border-radius: inherit;
+  transition: all 0.2s ease-in-out;
+  background: @color1;
+  min-width: 50px;
+  font-size: 16px;
+  color: @background;
+  border-radius: inherit;
 }
 
 #workspaces button.persistent {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 #workspaces button:hover {
-    transition: none;
-    box-shadow: inherit;
-    text-shadow: inherit;
-    border-radius: inherit;
-    color: @background;
-    background-size: 400% 400%;
-    background-color: @color5;
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  border-radius: inherit;
+  color: @background;
+  background-size: 400% 400%;
+  background-color: @color5;
 }
 
 #workspaces button.urgent {
-    transition: all 0.3s ease-in-out;
-    background: @color2;
-    color: @background;
-    background-size: 400% 400%;
-    border-radius:inherit;
+  transition: all 0.3s ease-in-out;
+  background: @color2;
+  color: @background;
+  background-size: 400% 400%;
+  border-radius: inherit;
 }
 
-#custom-launcher{
-    font-size: 20px;
-    margin-top: 10px;
-    margin-left: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @color1;
-    background-color: @background;
+#custom-launcher {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @color1;
+  background-color: @background;
 }
 
 #clock {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @foreground;
-    border-style: solid;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @foreground;
+  border-style: solid;
+  background-color: @background;
 }
 
 #pulseaudio {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @foreground;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @foreground;
+  background-color: @background;
 }
 
 #pulseaudio.muted {
-    background-color: #f38ba8;
-    color: @background;
+  background-color: #f38ba8;
+  color: @background;
 }
 
 #cpu:hover,
@@ -119,173 +121,175 @@ window#waybar.hidden {
 #network:hover,
 #temperature:hover,
 #custom-gpu:hover,
-#idle_inhibator:hover {
-    background-color: @color1;
-    color: @background;
+#idle_inhibitor:hover {
+  background-color: @color1;
+  color: @background;
 }
 
 #battery {
-    margin-top: 10px;
-    margin-left: 8px;
-    margin-right: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    background-color: @background;
-    color: #7da0a6;
+  margin-top: 10px;
+  margin-left: 8px;
+  margin-right: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  background-color: @background;
+  color: #7da0a6;
 }
 
-#battery.charging, #battery.plugged {
-    color: #a6e3a1;
+#battery.charging,
+#battery.plugged {
+  color: #a6e3a1;
 }
 
 #battery.warning:not(.charging) {
-    color: #f38ba8;
+  color: #f38ba8;
 }
 
 /* Critical Low (Blinking Red) */
 #battery.critical:not(.charging) {
-    background-color: #f38ba8;
-    color: @background;
-    animation-name: blink;
-    animation-duration: 3.0s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: #f38ba8;
+  color: @background;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #battery:hover {
-    background-color: @color1;
-    color: @background;
+  background-color: @color1;
+  color: @background;
 }
 
 #battery label:first-child {
-    font-family: 'Symbols Nerd Font', monospace;
-    font-size: 16px; 
+  font-family: "Symbols Nerd Font", monospace;
+  font-size: 16px;
 }
 
 #custom-gpu {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @foreground;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @foreground;
+  background-color: @background;
 }
 
 #tray {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @foreground;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @foreground;
+  background-color: @background;
 }
 
 #network {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    background-color: @background;
-    color: @foreground;
-    transition: 0.3s;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  background-color: @background;
+  color: @foreground;
+  transition: 0.3s;
 }
 
 @keyframes blink {
-    to {
-        background-color: #f38ba8;
-        color: @background;
-    }
+  to {
+    background-color: #f38ba8;
+    color: @background;
+  }
 }
 
 #mpris {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @foreground;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @foreground;
+  background-color: @background;
 }
 
 #mpris.paused {
-    color: @color4; /* Dim/Accent color when paused */
-    font-style: italic;
+  font-family: "Maple Mono", "Symbols Nerd Font", "JetBrainsMono Nerd Font";
+  font-style: italic;
+  color: @color4;
 }
 
 #temperature {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @color2;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @color2;
+  background-color: @background;
 }
 
 #temperature.critical {
-    background-color: #f38ba8;
-    color: @background;
-    animation-name: blink;
-    animation-duration: 3.0s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: #f38ba8;
+  color: @background;
+  animation-name: blink;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #idle_inhibitor {
-    margin-top: 10px;
-    margin-left: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @foreground;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @foreground;
+  background-color: @background;
 }
 
 #idle_inhibitor.activated {
-    color: @background;
-    background-color: #f38ba8;
+  color: @background;
+  background-color: @color1;
 }
 
 #custom-notification {
-    margin-top: 10px;
-    margin-left: 8px;
-    margin-right: 12px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 0px;
-    border-radius: 10px;
-    transition: none;
-    color: @foreground;
-    background-color: @background;
+  margin-top: 10px;
+  margin-left: 8px;
+  margin-right: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  transition: none;
+  color: @foreground;
+  background-color: @background;
 }
 
 #custom-notification.notification,
 #custom-notification.dnd-notification {
-    padding-left: 18px;
-    padding-right: 12px;
+  padding-left: 18px;
+  padding-right: 12px;
 }
 
 #custom-notification:hover {
-    background-color: @color1;
-    color: @background;
+  background-color: @color1;
+  color: @background;
 }

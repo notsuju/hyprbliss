@@ -1,0 +1,85 @@
+@import "~/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+    show-icons: false;
+    font: "Input Mono Medium 12";
+}
+
+window {
+    width: 550px; /* Slightly wider to fit the shortcut text */
+    border-radius: 15px;
+    border: 3px solid;
+    transparency: "real";
+    border-color: @active-background;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px; 
+    
+    /* Centered for a cheat sheet menu */
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing: 15px;
+}
+
+inputbar {
+    background-color: transparent;
+    spacing: 10px;
+    children: [textbox-prompt-colon, entry];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ""; /* Search icon */
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #6bb583; 
+    text-color: @background;
+    vertical-align: 0.5;
+}
+
+entry {
+    background-color: @background; 
+    text-color: #6b6b6b;
+    placeholder: "Search a shortcut...";
+    cursor-width: 8px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    vertical-align: 0.5;
+}
+
+listview {
+    background-color: transparent;
+    lines: 8; /* Show a few more items for the cheat sheet */
+    spacing: 8px; 
+    scrollbar: false;
+    border: 0px;
+    fixed-height: true;
+}
+
+element {
+    background-color: @background; 
+    padding: 12px 15px; 
+    border-radius: 10px;
+}
+
+/* Standard Items */
+element normal.normal, element alternate.normal {
+    background-color: @background;
+    text-color: @foreground;
+}
+
+/* Hovered Item */
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @background;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    padding: 0px; 
+}
