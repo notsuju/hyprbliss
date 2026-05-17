@@ -8,6 +8,7 @@
 
 <img width="1920" height="1081" alt="swappy-20260401-231900" src="https://github.com/user-attachments/assets/938c12b6-0990-4ca5-a5d2-e34165d78232" />
 
+New waybar and swaync
 <img width="1920" height="1080" alt="screenshot-20260517-180939" src="https://github.com/user-attachments/assets/1714ef02-7a79-449c-9fc6-29635f7aa7ae" />
 
 Font using : [Input Mono](https://input.djr.com/)
