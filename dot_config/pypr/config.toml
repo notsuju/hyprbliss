@@ -1,12 +1,6 @@
 [pyprland]
 plugins = ["scratchpads"]
 
-[scratchpads.term]
-animation = "fromTop"
-command = "kitty --class pypr-term"
-class = "pypr-term"
-size = "75% 60%"
-
 [scratchpads.cheatsheet]
 animation = "fromTop"
 command = "zathura ~/.config/pypr/cheatsheet.pdf"
@@ -19,4 +13,29 @@ command = "kitty --class btop-scratchpad -e btop"
 class = "btop-scratchpad"
 size = "60% 60%"
 margin = 50
+unfocus = "hide"
+lazy = true
+
+[scratchpads.rmpc]
+animation = "fromRight" 
+command = "kitty --class rmpc-scratchpad -e rmpc"
+class = "rmpc-scratchpad"
+size = "45% 90%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class dropterm"
+class = "dropterm"
+size = "70% 50%"
+unfocus = "hide"
+lazy = true
+
+[scratchpads.help]
+animation = "fromTop"
+command = "kitty --class help-scratchpad -e less ~/.config/hypr/keybinds.md"
+class = "help-scratchpad"
+size = "40% 70%"
+unfocus = "hide"
 lazy = true

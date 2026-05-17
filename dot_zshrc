@@ -1,30 +1,33 @@
 # Import colorscheme from 'wal' asynchronously
 # (cat ~/.cache/wal/sequences &)
 
-
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
+
 
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Set up the prompt
 
+# Set up the prompt
 autoload -Uz promptinit
 promptinit
 prompt adam1
 
 setopt histignorealldups sharehistory
 
-# Use emacs keybindings even if our EDITOR is set to vi
+
+# Use emacs keybindings
 bindkey -e
+
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
+
 
 # Use modern completion system
 autoload -Uz compinit
@@ -49,29 +52,44 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-# Manual configuration
 
-PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+# Cleaned up PATH
+export PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
-# Manual aliases
-alias la='lsd -la --group-dirs=first'
-alias l='lsd --group-dirs=first'
-alias lla='lsd -lha --group-dirs=first'
-alias ls='lsd --group-dirs=first'
+# App-Specific PATHs
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.opencode/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Aliases
 alias cat='bat'
+alias rm='rm -i'
+alias mkdir='mkdir -p'
+alias ..='z ..'
 alias cl='clear'
 alias nvims='nvim $(fzf -m --preview="bat --color=always {}")'
 alias ll='ls -latr'
-
+alias s='yay -Ss' # Search for a package
+alias i='yay -Si' # Information about a package
+alias updatemirrors="rate-mirrors --protocol=https --entry-country=IN arch | sudo tee /etc/pacman.d/mirrorlist && sudo pacman -Syyu"
+alias ls='eza --group-directories-first --icons=always'
+alias la='eza -la --group-directories-first'
+alias l='eza --group-directories-first'
+alias lla='eza -lha --group-directories-first'
+alias storage='sudo btrfs fi usage /'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-sudo/sudo.plugin.zsh
+
 
 # Set 'man' colors
 function man() {
@@ -85,6 +103,7 @@ function man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     man "$@"
 }
+
 
 # fzf improvement
 function fzf-lovely(){
@@ -121,6 +140,7 @@ bindkey "^[[3~" delete-char
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
+
 # Japanese input support
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx 
@@ -128,21 +148,14 @@ export XMODIFIERS=@im=fcitx
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
 
-export PATH=$PATH:/home/suju/.spicetify
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
 # Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
-(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
-
-export PATH=$HOME/.local/bin:$PATH
+# (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
 
 # bun completions
 [ -s "/home/suju/.bun/_bun" ] && source "/home/suju/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Setting up zoxide
 eval "$(zoxide init zsh)"
@@ -152,8 +165,5 @@ eval "$(zoxide init zsh)"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
-# For Nim
-export PATH=/home/suju/.nimble/bin:$PATH
-
-# opencode
-export PATH=/home/suju/.opencode/bin:$PATH
+# Finalize Powerlevel10k instant prompt. Should stay at the bottom of ~/.zshrc.
+(( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize

@@ -3,8 +3,10 @@
 /* swaync-client -rs to reload the css*/
 
 * {
+  all: unset; /* Removes everything gtk */
   font-family: "Input Mono Medium", "Symbols Nerd Font", sans-serif;
-  font-weight: Regular;
+  font-size: 15px;
+  font-weight: bold;
   background-clip: padding-box;
 }
 
@@ -19,10 +21,10 @@ window#swaync-notification-window {
 }
 
 .control-center {
-  background: alpha(@background, 0.8); /* More transparent for better blur */
+  background: alpha(@background, 0.85);
   border-radius: 15px;
-  border: 0px solid @color1;
   color: @foreground;
+  border: 3px solid @color1;
 }
 
 .control-center-list,
@@ -34,9 +36,9 @@ window#swaync-notification-window {
 }
 
 .notification {
-  background: alpha(@background, 0.8);
+  background: @background;
   border-radius: 12px;
-  margin: 10px 15px; /* Adds breathing room */
+  margin: 10px 15px;
   border: 1px solid @color2;
   padding: 0;
 }
@@ -44,6 +46,22 @@ window#swaync-notification-window {
 .notification-content {
   background: transparent;
   padding: 12px;
+}
+
+.notification-group-headers {
+  margin: 0 15px;
+  padding: 5px 0px;
+  color: @color3;
+}
+
+notification-group-headers .close-button {
+  padding: 0 8px;
+  border-radius: 5px;
+  color: @foreground;
+}
+
+.notification-group-headers .close-button:hover {
+  background: alpha(@color1, 0.4);
 }
 
 .widget-title {
@@ -54,16 +72,85 @@ window#swaync-notification-window {
 }
 
 .widget-dnd {
-  background: transparent;
-  margin: 5px 15px 15px 15px;
+  background: alpha(@background, 0.8);
+  border-radius: 12px;
+  margin: 5px 8px 15px 8px;
+  padding: 12px 10px;
+  color: @foreground;
 }
 
 .widget-dnd > switch {
-  background: @background;
-  border: 1px solid @color1;
+  background: alpha(@foreground, 0.2);
+  border: 1px solid alpha(@foreground, 0.3);
   border-radius: 10px;
+  min-width: 32px;
+  min-height: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 .widget-dnd > switch:checked {
   background: @color1;
+  border-color: @color1;
+}
+
+.widget-dnd > switch slider {
+  background: @foreground;
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.widget-mpris {
+  margin: 15px 8px 5px 8px;
+  background: transparent;
+}
+
+.mpris-background {
+  border-radius: 15px;
+}
+
+/* 2. This applies the dark tint directly over the blurred image */
+.mpris-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.widget-mpris-album-art {
+  border-radius: 10px;
+}
+
+.widget-mpris-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.widget-mpris-subtitle {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.widget-mpris-player {
+  padding: 5px 0;
+}
+
+.mpris-overlay > box:last-child {
+  border-radius: 18px;
+  padding: 0 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.widget-mpris-player button {
+  background: transparent;
+  color: white;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 8px;
+}
+
+.widget-mpris-player button:hover {
+  background: alpha(@color1, 0.6);
 }
