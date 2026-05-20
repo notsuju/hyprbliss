@@ -1,15 +1,10 @@
 # Zenbook Duo Hyprland Rice
 ## Screenshots
-<img width="1916" height="1595" alt="swappy-20260401-232855" src="https://github.com/user-attachments/assets/8ecea0a6-b9f7-4165-9cc5-938d4f25e9db" />
+<img width="1920" height="1595" alt="screenshot-20260520-222806" src="https://github.com/user-attachments/assets/12a0e4b6-d065-4f57-ac6b-4db8a1fbfb5e" />
 
-<img width="1920" height="1595" alt="swappy-20260401-235248" src="https://github.com/user-attachments/assets/df89854b-c6e9-47fe-8732-41d75fe2bba8" />
+<img width="1919" height="1082" alt="screenshot-20260520-223453" src="https://github.com/user-attachments/assets/adafe0bf-93ae-4214-b4fe-9f6759988c68" />
 
-<img width="1920" height="1080" alt="swappy-20260401-231957" src="https://github.com/user-attachments/assets/9f30e50b-d0f8-46d6-b77b-9f8a4ff9899b" />
-
-<img width="1920" height="1081" alt="swappy-20260401-231900" src="https://github.com/user-attachments/assets/938c12b6-0990-4ca5-a5d2-e34165d78232" />
-
-New waybar and swaync
-<img width="1920" height="1080" alt="screenshot-20260517-180939" src="https://github.com/user-attachments/assets/1714ef02-7a79-449c-9fc6-29635f7aa7ae" />
+<img width="1919" height="1596" alt="screenshot-20260520-222044" src="https://github.com/user-attachments/assets/7d45a6e9-463c-4a78-b49c-a4bd6b309172" />
 
 Font using : [Input Mono](https://input.djr.com/)
 
