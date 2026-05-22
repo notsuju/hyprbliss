@@ -1,0 +1,23 @@
+#██╗  ██╗██╗   ██╗██████╗ ██████╗ ██╗      █████╗ ███╗   ██╗██████╗ 
+#██║  ██║╚██╗ ██╔╝██╔══██╗██╔══██╗██║     ██╔══██╗████╗  ██║██╔══██╗
+#███████║ ╚████╔╝ ██████╔╝██████╔╝██║     ███████║██╔██╗ ██║██║  ██║
+#██╔══██║  ╚██╔╝  ██╔═══╝ ██╔══██╗██║     ██╔══██║██║╚██╗██║██║  ██║
+#██║  ██║   ██║   ██║     ██║  ██║███████╗██║  ██║██║ ╚████║██████╔╝
+#╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ 
+
+# Sourcing all the configs
+source = ~/.config/hypr/general/startup.conf
+source = ~/.config/hypr/general/env.conf
+source = ~/.config/hypr/general/programs.conf
+source = ~/.config/hypr/input/binds.conf
+source = ~/.config/hypr/input/devices.conf
+source = ~/.config/hypr/input/input.conf
+source = ~/.config/hypr/layout/monitors.conf
+source = ~/.config/hypr/layout/workspaces.conf
+source = ~/.config/hypr/rules/decorations.conf
+source = ~/.config/hypr/plugins/plugins.conf
+source = ~/.config/hypr/rules/windowRules.conf
+source = ~/.config/hypr/animations/bliss.conf
+
+# HyprMod managed settings
+#source = /home/suju/.config/hypr/hyprland-gui.conf
