@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "output": "eDP-1",
-    "height": 38,
+    "height": 36,
     "modules-left": [
         "custom/launcher",
         "hyprland/workspaces", 

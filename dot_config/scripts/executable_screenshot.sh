@@ -7,4 +7,4 @@ mkdir -p "$HOME/Pictures/Screenshots"
 FILE_PATH="$HOME/Pictures/Screenshots/screenshot-$(date '+%Y%m%d-%H%M%S').png"
 
 # Execute grimblast (Freezes screen, copies to clipboard, saves file, and sends notification)
-grimblast --notify --freeze copysave area "$FILE_PATH"
+grimblast --notify copysave area "$FILE_PATH"

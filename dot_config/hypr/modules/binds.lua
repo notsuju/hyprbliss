@@ -5,8 +5,8 @@
 -- ██████╔╝██║██║ ╚████║██████╔╝███████║
 -- ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝
 
--- KEYBINDS
-local mainMod = "SUPER" --(Includes Specific keybinds for Asus Zenbook Duo 14)
+-- KEYBINDS (Includes Specific keybinds for Asus Zenbook Duo 14)
+local mainMod = "SUPER"
 
 -- Hyprland Native
 hl.bind(mainMod .. " + Y", hl.dsp.window.pseudo())
@@ -14,8 +14,8 @@ hl.bind(mainMod .. " + W", hl.dsp.window.close())
 
 -- Scripts
 hl.bind("code:248", hl.dsp.exec_cmd("/usr/local/bin/toggle-screen"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("~/.config/hypr/smart-float.sh"))
-hl.bind("XF86WebCam", hl.dsp.exec_cmd("~/.config/scripts/toggle-nightlight.sh"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("~/.config/scripts/smart-float.sh")) -- Enables smart float
+hl.bind("XF86WebCam", hl.dsp.exec_cmd("~/.config/scripts/toggle-nightlight.sh")) -- Fn + <F10>
 hl.bind("XF86Fn_F", hl.dsp.exec_cmd("~/.config/scripts/toggle-ppd.sh")) -- Fn + F
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/scripts/screenshot.sh"))
 
@@ -112,7 +112,7 @@ hl.bind(mainMod .. " + CTRL + l", hl.dsp.window.resize({ x = 100, y = 0, relativ
 hl.bind(mainMod .. " + CTRL + k", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
 hl.bind(mainMod .. " + CTRL + j", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
 
--- Workspaces
+-- Workspaces switching & moving windows
 for i = 1, 9 do
 	hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))

@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-# Grab the active player
 player=$(playerctl -l 2>/dev/null | head -n 1)
 
-# Point to your new Pywal theme!
 rofi_theme="$HOME/.config/rofi/musicPlayer/music-player.rasi"
 
 title=$(playerctl -p "$player" metadata title)
@@ -13,15 +11,12 @@ album=$(playerctl -p "$player" metadata album)
 loop=$(playerctl $player loop)
 status=$(playerctl -p "$player" status 2>/dev/null)
 
-# Set the dynamic icons based on current state
 play=$([[ "$status" == "Playing" ]] && echo "⏸" || echo "▶")
 repeat=$([[ "$loop" == "None" ]] && echo "󰑗" || echo "󰑖")
 
-# The 5 media buttons
 options="$repeat\n󰒮\n$play\n󰒭\n"
 
-# Launch Rofi (using the -mesg flag to pass the song title to the theme)
-choice=$(echo -e "$options" | rofi -dmenu -theme "$rofi_theme" -mesg "🎵 $title")
+choice=$(echo -e "$options" | rofi -dmenu -theme "$rofi_theme" -mesg "🎵 $title" -selected-row 2)
 
 # Handle the user's selection
 case "$choice" in

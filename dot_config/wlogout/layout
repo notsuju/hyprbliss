@@ -12,7 +12,7 @@
 }
 {
     "label" : "logout",
-    "action" : "if [ \"$XDG_CURRENT_DESKTOP\" = \"niri\" ]; then niri msg action quit; else hyprctl dispatch exit; fi",
+    "action" : "if [ \"$XDG_CURRENT_DESKTOP\" = \"niri\" ]; then niri msg action quit; else hyprshutdown; fi",
     "text" : "Logout",
     "keybind" : "e"
 }

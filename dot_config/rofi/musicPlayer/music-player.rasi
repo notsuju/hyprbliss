@@ -28,7 +28,6 @@ mainbox {
     children: [ message, listview ];
 }
 
-/* The Song Title Bar (Now a Bubble!) */
 message {
     background-color: @background;
     border-radius: 12px;
@@ -43,7 +42,6 @@ textbox {
     horizontal-align: 0.5; 
 }
 
-/* The Media Buttons Grid */
 listview {
     background-color: transparent;
     columns: 5; 

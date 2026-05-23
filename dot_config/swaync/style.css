@@ -21,10 +21,10 @@ window#swaync-notification-window {
 }
 
 .control-center {
-  background: alpha(@background, 0.85);
+  background: alpha(@background, 0.75);
   border-radius: 15px;
   color: @foreground;
-  border: 3px solid @color1;
+  border: 2px solid @color2;
 }
 
 .control-center-list,
@@ -36,16 +36,47 @@ window#swaync-notification-window {
 }
 
 .notification {
+  /* background: alpha(@background, 0.75); */
   background: @background;
   border-radius: 12px;
   margin: 10px 15px;
-  border: 1px solid @color2;
+  border: 2px solid @color2;
   padding: 0;
 }
 
 .notification-content {
   background: transparent;
   padding: 12px;
+  font-size: 15px;
+}
+
+.app-icon,
+.notification-content image {
+  all: revert;
+  -gtk-icon-size: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: 15px;
+  border-radius: 8px;
+  display: block;
+}
+
+.notification-content .summary {
+  /* the summary title */
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.notification-content .body {
+  font-size: 14px;
+  color: alpha(@foreground, 0.85);
+}
+
+.notification-content .time {
+  font-size: 0.8rem;
+  color: alpha(@foreground, 0.6);
+  margin-left: 10px;
 }
 
 .notification-group-headers {
@@ -67,7 +98,7 @@ notification-group-headers .close-button {
 .widget-title {
   color: @color3;
   background: transparent;
-  font-size: 1.2rem;
+  font-size: 18px;
   margin: 15px 15px 5px 15px;
 }
 

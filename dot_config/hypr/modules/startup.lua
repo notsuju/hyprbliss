@@ -18,14 +18,14 @@ hl.on("hyprland.start", function()
 	-- Core Daemons (Wallpaper, OSD, Night Light)
 	hl.exec_cmd("pypr")
 	hl.exec_cmd("awww-daemon")
-	hl.exec_cmd("swayosd-server --top-margin 0.97")
+	hl.exec_cmd("swayosd-server --top-margin 0.99") -- Not working properly right now.
 	hl.exec_cmd("wlsunset -l 20.5 -L 78.9")
 
 	-- Battery notifications
 	hl.exec_cmd("batsignal -n BAT0 -w 30 -c 15")
 
 	-- UI & Applets
-	hl.exec_cmd("waybar")
+	hl.exec_cmd("waybar & disown")
 	hl.exec_cmd("nm-applet --indicator")
 
 	-- Waypaper
@@ -42,5 +42,5 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("~/.config/scripts/charger-sound.sh")
 
 	-- Handle the idle daemon
-	hl.exec_cmd("killall -q hypridle; hypridle")
+	-- hl.exec_cmd("killall -q hypridle; hypridle") managed by systemd now
 end)

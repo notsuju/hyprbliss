@@ -8,7 +8,7 @@
 -- Kitty
 hl.window_rule({
 	match = { class = "kitty" },
-	opacity = "1 0.8",
+	opacity = "1.0 0.8", -- Active Inactive fullscreen
 })
 
 -- Ghostty
@@ -18,9 +18,48 @@ hl.window_rule({
 })
 
 -- Zen
+-- hl.window_rule({
+-- 	match = { class = "zen" },
+-- 	opacity = "0.9 0.9 1.0",
+-- })
+
+-- 2. Exception: Force 1.0 everywhere if the window title contains "YouTube"
+-- hl.window_rule({
+-- 	match = {
+-- 		class = "zen",
+-- 		title = ".*YouTube.*",
+-- 	},
+-- 	opacity = "1.0 1.0 1.0",
+-- })
+
+-- Notes
 hl.window_rule({
-	match = { class = "zen" },
+	match = { class = "marktext" },
 	opacity = "0.9",
+})
+
+-- Notes
+hl.window_rule({
+	match = { class = "chrome-excalidraw.com__-Default" },
+	opacity = "0.9",
+})
+
+-- Brave
+hl.window_rule({
+	match = { class = "brave-origin-nightly" },
+	opacity = "0.9 0.7 1.0",
+})
+
+-- Helium
+hl.window_rule({
+	match = { class = "helium" },
+	opacity = "0.9 0.7 1.0",
+})
+
+-- Chromium
+hl.window_rule({
+	match = { class = "chromium" },
+	opacity = "0.9 0.7 1.0",
 })
 
 -- Nautilus
@@ -84,12 +123,20 @@ hl.window_rule({
 	size = { "(monitor_w*0.85)", "(monitor_h*0.75)" },
 })
 
--- Logseq
+-- Marktext
 hl.window_rule({
-	match = { class = "Logseq" },
+	match = { class = "marktext" },
 	float = true,
 	center = true,
 	size = { "(monitor_w*0.85)", "(monitor_h*0.85)" },
+})
+
+-- Excalidraw
+hl.window_rule({
+	match = { class = "chrome-excalidraw.com__-Default" },
+	float = true,
+	center = true,
+	size = { "(monitor_w*0.85)", "(monitor_h*0.95)" },
 })
 
 -- Waypaper
@@ -166,8 +213,10 @@ hl.window_rule({ match = { class = "^(org.freedesktop.impl.portal.desktop.gtk)$"
 -- Pyprland
 hl.window_rule({ match = { class = "btop-scratchpad" }, border_size = 0 })
 hl.window_rule({ match = { class = "rmpc-scratchpad" }, border_size = 0 })
+hl.exec_cmd("hyprctl keyword windowrulev2 'animation slide right, class:^(rmpc-scratchpad)$'")
 hl.window_rule({ match = { class = "org.pwmt.zathura" }, border_size = 0 })
 
+-- Layer Rules
 -- Blurs
 hl.layer_rule({ match = { namespace = "logout_dialog" }, blur = true, ignore_alpha = 0.1 })
 hl.layer_rule({ match = { namespace = "swayosd" }, blur = true, ignore_alpha = 0.1 })
@@ -175,9 +224,15 @@ hl.layer_rule({ match = { namespace = "swaync-control-center" }, blur = true, ig
 hl.layer_rule({ match = { namespace = "swaync-notification-window" }, blur = true, ignore_alpha = 0.1 })
 hl.layer_rule({ match = { namespace = "rofi" }, blur = true, ignore_alpha = 0.1 })
 
--- Layer Rules
+-- Swaync Animations
 hl.layer_rule({
 	name = "notification-animation",
 	match = { namespace = "swaync-control-center" },
 	animation = "slide top",
+})
+-- Rofi Animations
+hl.layer_rule({
+	name = "rofi",
+	match = { namespace = "rofi" },
+	animation = "slide bottom",
 })
