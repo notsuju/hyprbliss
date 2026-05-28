@@ -8,12 +8,18 @@ _a rice that's beautiful and productive<3_
 
 ---
 
-<img width="1920" height="50" alt="screenshot-20260528-152425" src="https://github.com/user-attachments/assets/0172ed6f-f908-43b0-b005-83afd0622969" />
+![banner](assets/banner.png)
 
 ---
 ## Screenshots
 
-![Desktop](assets/screenshot-20260528-100256.png)
+![Desktop](assets/desktop.png)
+
+![nvim](assets/nvim.png)
+
+![browser](assets/browser.png)
+
+![lock](assets/hyprlock.jpg)
 
 ---
 
