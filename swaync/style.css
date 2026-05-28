@@ -1,0 +1,187 @@
+@import "../../.cache/wal/colors-waybar.css";
+
+/* swaync-client -rs to reload the css*/
+
+* {
+  all: unset; /* Removes everything gtk */
+  font-family: "Input Mono Medium", "Symbols Nerd Font", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  background-clip: padding-box;
+}
+
+window,
+window.control-center,
+window.blank-window,
+window.floating-notifications,
+window#swaync-control-center,
+window#swaync-notification-window {
+  background: rgba(0, 0, 0, 0) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.control-center {
+  background: alpha(@background, 0.75);
+  border-radius: 12px;
+  color: @foreground;
+  border: 2px solid @color2;
+}
+
+.control-center-list,
+.control-center-list-placeholder,
+.notification-row {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.notification {
+  /* background: alpha(@background, 0.75); */
+  background: @background;
+  border-radius: 8px;
+  margin: 10px 15px;
+  border: 2px solid @color2;
+  padding: 0;
+}
+
+.notification-content {
+  background: transparent;
+  padding: 12px;
+  font-size: 15px;
+}
+
+.app-icon,
+.notification-content image {
+  all: revert;
+  -gtk-icon-size: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  margin-right: 15px;
+  border-radius: 8px;
+  display: block;
+}
+
+.notification-content .summary {
+  /* the summary title */
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.notification-content .body {
+  font-size: 14px;
+  color: alpha(@foreground, 0.85);
+}
+
+.notification-content .time {
+  font-size: 0.8rem;
+  color: alpha(@foreground, 0.6);
+  margin-left: 10px;
+}
+
+.notification-group-headers {
+  margin: 0 15px;
+  padding: 5px 0px;
+  color: @color3;
+}
+
+notification-group-headers .close-button {
+  padding: 0 8px;
+  border-radius: 5px;
+  color: @foreground;
+}
+
+.notification-group-headers .close-button:hover {
+  background: alpha(@color1, 0.4);
+}
+
+.widget-title {
+  color: @color3;
+  background: transparent;
+  font-size: 18px;
+  margin: 15px 15px 5px 15px;
+}
+
+.widget-dnd {
+  background: alpha(@background, 0.8);
+  border-radius: 8px;
+  margin: 5px 8px 15px 8px;
+  padding: 12px 10px;
+  color: @foreground;
+}
+
+.widget-dnd > switch {
+  background: alpha(@foreground, 0.2);
+  border: 1px solid alpha(@foreground, 0.3);
+  border-radius: 12px;
+  min-width: 32px;
+  min-height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.widget-dnd > switch:checked {
+  background: @color1;
+  border-color: @color1;
+}
+
+.widget-dnd > switch slider {
+  background: @foreground;
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.widget-mpris {
+  margin: 15px 8px 5px 8px;
+  background: transparent;
+}
+
+.mpris-background {
+  border-radius: 12px;
+}
+
+/* 2. This applies the dark tint directly over the blurred image */
+.mpris-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.widget-mpris-album-art {
+  border-radius: 8px;
+}
+
+.widget-mpris-title {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.widget-mpris-subtitle {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.widget-mpris-player {
+  padding: 5px 0;
+}
+
+.mpris-overlay > box:last-child {
+  border-radius: 18px;
+  padding: 0 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.widget-mpris-player button {
+  background: transparent;
+  color: white;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 8px;
+}
+
+.widget-mpris-player button:hover {
+  background: alpha(@color1, 0.6);
+}
