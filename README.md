@@ -35,26 +35,3 @@ hyprbliss is my personal rice for my zenbook duo, it's simple, looks good and wo
 | **font**        | [Input Mono](https://input.djr.com/)                  |
 
 ---
-
-# STEPS TO INSTALL
-Install the Prerequisites:
-
-``` sudo pacman -S git --noconfirm ```
-
-``` sudo pacman -S chezmoi --noconfirm ```
-
-Download the Vault:
-
-``` chezmoi init https://github.com/notsuju/hyprland_dotfiles.git ```
-
-Run the Auto-Installer for main Programs:
-
-``` ~/.local/share/chezmoi/scripts/install_programs.sh ```
-
-Apply the Dotfiles:
-
-``` chezmoi apply ```
-
-Fix Permissions:
-
-``` chmod -R u+rw ~/.config ```
