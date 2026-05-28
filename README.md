@@ -1,4 +1,4 @@
-# Zenbook Duo Hyprland Rice
+# 🌸 Hyprbliss
 ## Screenshots
 <img width="1920" height="1083" alt="screenshot-20260528-100256" src="https://github.com/user-attachments/assets/769845de-df28-42f8-8b30-d1691ea0d583" />
 
