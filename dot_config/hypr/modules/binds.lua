@@ -8,6 +8,12 @@
 -- KEYBINDS (Includes Specific keybinds for Asus Zenbook Duo 14)
 local mainMod = "SUPER"
 
+-- Toggle keybinds
+-- hl.bind("XF86WebCam", hl.dsp.submap("clean"))
+-- hl.define_submap("clean", function()
+-- 	hl.bind("XF86WebCam", hl.dsp.submap("reset"))
+-- end)
+
 -- Hyprland Native
 hl.bind(mainMod .. " + Y", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
@@ -15,24 +21,26 @@ hl.bind(mainMod .. " + W", hl.dsp.window.close())
 -- Scripts
 hl.bind("code:248", hl.dsp.exec_cmd("/usr/local/bin/toggle-screen"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("~/.config/scripts/smart-float.sh")) -- Enables smart float
-hl.bind("XF86WebCam", hl.dsp.exec_cmd("~/.config/scripts/toggle-nightlight.sh")) -- Fn + <F10>
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.config/scripts/toggle-nightlight.sh")) -- Fn + <F10>
 hl.bind("XF86Fn_F", hl.dsp.exec_cmd("~/.config/scripts/toggle-ppd.sh")) -- Fn + F
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/scripts/screenshot.sh"))
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("/usr/local/bin/gpu-toggle"))
 
 -- Applications
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nautilus"))
 hl.bind("XF86TouchpadToggle", hl.dsp.exec_cmd("blueman-manager")) -- Fn + <F6>
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("killall -SIGUSR2 waybar")) -- Restart Waybar
+hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar")) -- Hide/show waybar
+hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("killall -SIGUSR2 waybar")) -- Restart waybar
 hl.bind("XF86Launch1", hl.dsp.exec_cmd("waypaper")) -- Fn + <F12> Asus Key
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 -- Rofi & Custom Luanchers
-hl.bind("ALT + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || rofi -show drun'"))
 hl.bind("SUPER + SHIFT + V", hl.dsp.exec_cmd("~/.config/rofi/clipboard/launcher.sh"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/.config/rofi/musicPlayer/music-player.sh"))
-hl.bind("SUPER + SHIFT + H", hl.dsp.exec_cmd("~/.config/rofi/shortcuts/shortcuts.sh")) -- Help
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || ~/.config/rofi/musicPlayer/music-player.sh'"))
+hl.bind("SUPER + SHIFT + H", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || ~/.config/rofi/shortcuts/shortcuts.sh'")) -- Help
 
 -- Power Binds
 hl.bind("xf86poweroff", hl.dsp.exec_cmd("wlogout"))

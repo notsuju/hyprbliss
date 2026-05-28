@@ -3,22 +3,24 @@
     "output": "eDP-1",
     "height": 36,
     "modules-left": [
-        "custom/launcher",
-        "hyprland/workspaces", 
+        // "custom/launcher",
+        "clock",
+        "hyprland/workspaces",
+        "idle_inhibitor",
+        "power-profiles-daemon",
         "niri/workspaces"
     ],
     "modules-center": [
-        "clock", 
+        // "clock", 
         "mpris"
     ],
     "modules-right": [
         "tray",
-        "custom/gpu",
-        "idle_inhibitor", 
-        //"power-profiles-daemon",
+        // "custom/gpu",
+        // "power-profiles-daemon",
         "pulseaudio", 
-        "battery", 
-        "custom/notification"
+"custom/notification",
+        "battery"
     ],
 
     "pulseaudio": {
@@ -39,17 +41,17 @@
         }
     },
 
-    // "power-profiles-daemon": {
-    //     "format": "{icon}",
-    //     "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    //     "tooltip": true,
-    //     "format-icons": {
-    //         "default": "",
-    //         "performance": "",
-    //         "balanced": "󰓅",
-    //         "power-saver": ""
-    //     }
-    // },
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "silly",
+            "balanced": "relax",
+            "power-saver": "slow"
+        }
+    },
 
     "custom/launcher":{
         "format": "",
@@ -73,25 +75,27 @@
     },
 
     "clock": {
-        "format": " {:%H:%M}",
+        "format": " {:%d - %H:%M}",
         "tooltip": true,
         "tooltip-format": "{:%Y-%m-%d}",
     },
 
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{icon}",
         "tooltip": false,
         "all-outputs": true,
+        "active-only": true,
         "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9"
+            "1": "A",
+            "2": "B",
+            "3": "C",
+            "4": "D",
+            "5": "E",
+            "6": "一",
+            "7": "二",
+            "8": "三",
+            "9": "१",
+            "10": "२"
         },
     },
 
@@ -171,12 +175,12 @@
         "escape": true
     },
 
-    "custom/gpu": {
-        "exec": "supergfxctl -g",
-        "interval": 5,
-        "format": "GPU: {}",
-        "on-click": "/usr/local/bin/gpu-toggle",
-        "signal": 8,
-        "tooltip": false
-    },
+    // "custom/gpu": {
+    //     "exec": "supergfxctl -g",
+    //     "interval": 5,
+    //     "format": "GPU: {}",
+    //     "on-click": "/usr/local/bin/gpu-toggle",
+    //     "signal": 8,
+    //     "tooltip": false
+    // },
 }

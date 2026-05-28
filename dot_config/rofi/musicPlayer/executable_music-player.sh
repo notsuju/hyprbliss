@@ -32,10 +32,10 @@ case "$choice" in
     ;;
     "$repeat") 
         if [[ "$loop" == "None" ]]; then
-            playerctl "$player" loop Playlist
+            playerctl -p "$player" loop Playlist
             notify-send -t 2000 "Repeat Enabled" "Looping Playlist"
         else
-            playerctl "$player" loop None
+            playerctl -p "$player" loop None
             notify-send -t 2000 "Repeat Disabled" "Looping Off"
         fi
     ;;

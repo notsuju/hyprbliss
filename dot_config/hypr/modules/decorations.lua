@@ -34,7 +34,7 @@ hl.config({
 		gaps_out = 7,
 		border_size = 3,
 		col = {
-			active_border = { colors = { 0x3E407D, wal_colors.color2 }, angle = 25 },
+			active_border = { colors = { wal_colors.color1, wal_colors.color2 }, angle = 45 },
 			inactive_border = wal_colors.background,
 		},
 		layout = "dwindle",

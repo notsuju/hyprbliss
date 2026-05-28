@@ -20,10 +20,10 @@ udevadm monitor --subsystem-match=power_supply | while read -r line; do
         if [ "$current_ac_state" != "$prev_ac_state" ]; then
             if [ "$current_ac_state" = "1" ]; then
                 # Play charging sound at exactly 50% volume
-                pw-play --volume=0.5 /home/suju/Documents/soundsLinux/charging.wav &
+                pw-play --volume=0.5 /home/suju/Documents/soundsLinux/tuturu.wav &
             elif [ "$current_ac_state" = "0" ]; then
                 # Play removal sound at exactly 50% volume
-                pw-play --volume=0.5 /home/suju/Documents/soundsLinux/charging_removal.wav &
+                pw-play --volume=0.5 /home/suju/Documents/soundsLinux/za_warudo.wav &
             fi
             
             # Update the memory of the previous state

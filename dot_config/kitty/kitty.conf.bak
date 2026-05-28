@@ -13,7 +13,7 @@ font_size 13
 disable_ligatures never
 
 # Url Settings
-# url_color #61afef
+url_color #61afef
 url_style curly
 
 # Keybinds
@@ -51,15 +51,10 @@ input_delay 3
 sync_to_monitor yes
 
 tab_bar_style powerline
-# active_tab_background #98c379
-# inactive_tab_background #e06c75
-# inactive_tab_foreground #000000
-# tab_bar_margin_color black
+
+active_tab_background #98c379
+inactive_tab_background #e06c75
+inactive_tab_foreground #000000
+tab_bar_margin_color black
 
 background_opacity 1.0
-
-
-# BEGIN_KITTY_THEME
-# Catppuccin-Mocha
-# include current-theme.conf
-# END_KITTY_THEME

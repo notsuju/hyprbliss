@@ -7,4 +7,4 @@ swaync-client -rs
 killall -SIGUSR2 waybar
 ~/.local/bin/btop-pywal.sh
 killall swayosd-server
-swayosd-server --style ~/.cache/wal/swayosd.css --top-margin 0.99 & disown
+swayosd-server --top-margin 0.99 & disown

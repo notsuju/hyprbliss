@@ -152,6 +152,7 @@ hl.window_rule({
 	match = { class = "org.gnome.Loupe" },
 	float = true,
 	center = true,
+	pin = true,
 	size = { "(monitor_w*0.75)", "(monitor_h*0.75)" },
 })
 
