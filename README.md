@@ -12,13 +12,8 @@ _a rice that's beautiful and productive<3_
 
 ---
 ## Screenshots
-<img width="1920" height="1083" alt="screenshot-20260528-100256" src="https://github.com/user-attachments/assets/769845de-df28-42f8-8b30-d1691ea0d583" />
 
-<img width="1920" height="1593" alt="screenshot-20260528-094134" src="https://github.com/user-attachments/assets/cdc3cebd-6e51-48bf-a30b-fd52e00099bc" />
-
-<img width="1920" height="1080" alt="screenshot-20260528-154217" src="https://github.com/user-attachments/assets/3cd4606b-98e9-43e7-814d-e80d53ad968a" />
-
-<img width="1920" height="1080" alt="mpv-shot0005" src="https://github.com/user-attachments/assets/0b49b76b-f2ea-4e3f-b9f4-867a5939a44f" />
+![Desktop](assets/screenshot-20260528-100256.png)
 
 ---
 
