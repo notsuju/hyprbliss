@@ -11,7 +11,7 @@ _a rice that's beautiful and productive<3_
 ![banner](assets/banner.png)
 
 ---
-## Screenshots
+## Preview
 
 ![Desktop](assets/desktop.png)
 
@@ -33,6 +33,7 @@ hyprbliss is my personal rice for my zenbook duo, it's simple, looks good and wo
 | **terminal**    | [kitty](https://sw.kovidgoyal.net/kitty/)             |
 | **shell**       | zsh                                                   |
 | **editor**      | [neovim](https://neovim.io/)                          |
-| **font**        | [Input Mono](https://input.djr.com/)                  |
+| **font**        | [Input Mono](https://input.djr.com/)                  |'
+| **wallpapers**  | [wallpapers](wallpapers)
 
 ---
