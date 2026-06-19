@@ -195,9 +195,6 @@
         // value. Keys must be between 0 and 100 and if the first or last key
         // are not 0 and 100 respectively, the lowest and highest value will be
         // used as 0 and 100.
-        // Only hex and RGB colors are supported here and your terminal must
-        // support them as well!
-        // rmpc does not support `horizontal_gradient` (yet?)
         bar_color: Gradient({
             0: "#89b4fa",
             50: "#cba6f7",
