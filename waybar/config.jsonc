@@ -1,7 +1,7 @@
 {
     "layer": "top",
     "output": "eDP-1",
-    "height": 36,
+    "position": "top",
     "modules-left": [
         // "custom/launcher",
         "clock",
@@ -11,15 +11,13 @@
         "niri/workspaces"
     ],
     "modules-center": [
-        // "clock", 
         "mpris"
     ],
     "modules-right": [
         "tray",
         // "custom/gpu",
-        // "power-profiles-daemon",
         "pulseaudio", 
-"custom/notification",
+        "custom/notification",
         "battery"
     ],
 

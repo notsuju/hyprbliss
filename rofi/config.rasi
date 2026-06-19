@@ -75,7 +75,8 @@ element normal.normal, element alternate.normal {
 }
 
 element selected.normal {
-    background-color: @selected-normal-background;
+    // background-color: @selected-normal-background;
+    background-color: #f38ba8;
     text-color: @background;
 }
 
