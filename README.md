@@ -17,7 +17,7 @@ _a rice that's simple beautiful and productive<3_
 
 ---
 
-hyprbliss is my personal rice for my zenbook duo, it's simple, looks good and works fast for my workflow.
+hyprbliss is my personal rice designed for zenbook duo, it's simple, looks good and works well for my workflow.
 
 |                 |                                                       |
 | --------------- | ----------------------------------------------------- |
@@ -27,7 +27,7 @@ hyprbliss is my personal rice for my zenbook duo, it's simple, looks good and wo
 | **terminal**    | [kitty](https://sw.kovidgoyal.net/kitty/)             |
 | **shell**       | zsh                                                   |
 | **editor**      | [neovim](https://neovim.io/)                          |
-| **font**        | [Input Mono](https://input.djr.com/)                  |'
+| **font**        | [Input Mono](https://input.djr.com/) & [Maple Mono](https://github.com/subframe7536/maple-font)                  |
 | **wallpapers**  | [wallpapers](wallpapers)
 
 ---
