@@ -13,11 +13,7 @@ _a rice that's beautiful and productive<3_
 ---
 ## Preview
 
-![Desktop](assets/desktop.png)
-
-![nvim](assets/nvim.png)
-
-![browser](assets/browser.png)
+![Desktop](assets/preview2.png)
 
 ---
 
