@@ -5,28 +5,29 @@
 -- ██║ ╚═╝ ██║╚██████╔╝██║ ╚████║██║   ██║   ╚██████╔╝██║  ██║███████║
 -- ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
 
-
 -- Main Display (eDP-1)
 hl.monitor({
-    output = "eDP-1",
-    mode = "1920x1080@60.01",
-    position = "2557x1345",
-    scale = 1,
+	output = "eDP-1",
+	mode = "1920x1080@60.01",
+	position = "2557x1345",
+	scale = 1,
 })
 
 -- Screenpad (DP-1)
 hl.monitor({
-    output = "DP-1",
-    mode = "1920x515@60.08",
-    position = "2557x2425",
-    scale = 1,
+	output = "DP-1",
+	mode = "1920x515@60.08",
+	position = "2557x2425",
+	scale = 1,
 })
 
--- External Display (HDMI-A-3)
+-- External Display (HDMI-A-3 / DP-3)
+-- HDMI-A-3 for laptop and DP-3 for docking station
 hl.monitor({
-    output = "HDMI-A-3",
-    mode = "1920x1080@60.00",
-    position = "637x1345",
-    scale = 1,
-    cm = "srgb",
+	-- output = "HDMI-A-3",
+	output = "DP-3",
+	mode = "1920x1080@60.00",
+	position = "637x1345",
+	scale = 1,
+	cm = "srgb",
 })

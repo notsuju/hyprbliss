@@ -3,7 +3,7 @@ hl.config({
 		kb_layout = "us,us",
 		kb_variant = ",dvp",
 		kb_model = "",
-		kb_options = "grp:alt_shift_toggle,ctrl:nocaps",
+		kb_options = "caps:escape",
 		kb_rules = "",
 
 		resolve_binds_by_sym = false,

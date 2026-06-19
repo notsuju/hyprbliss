@@ -8,13 +8,13 @@
 -- Kitty
 hl.window_rule({
 	match = { class = "kitty" },
-	opacity = "1.0 0.8", -- Active Inactive fullscreen
+	opacity = "1.0 0.9", -- Active Inactive fullscreen
 })
 
 -- Ghostty
 hl.window_rule({
 	match = { class = "com.mitchellh.ghostty" },
-	opacity = "1 0.8",
+	opacity = "0.9 0.8",
 })
 
 -- Zen
@@ -62,17 +62,10 @@ hl.window_rule({
 	opacity = "0.9 0.7 1.0",
 })
 
--- Nautilus
+-- File Manager
 hl.window_rule({
-	match = { class = "org.gnome.Nautilus" },
-	opacity = "1 0.8",
-	float = true,
-	center = true,
-	size = { "(monitor_w*0.65)", "(monitor_h*0.65)" },
-})
-
-hl.window_rule({
-	match = { class = "org.gnome.NautilusPreviewer" },
+	match = { class = "thunar" },
+	opacity = "1.0 0.9 1.0",
 	float = true,
 	center = true,
 	size = { "(monitor_w*0.65)", "(monitor_h*0.65)" },

@@ -15,38 +15,39 @@ local mainMod = "SUPER"
 -- end)
 
 -- Hyprland Native
-hl.bind(mainMod .. " + Y", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + W", hl.dsp.window.close())
+hl.bind(mainMod .. " + B", hl.dsp.window.pseudo())
+hl.bind(mainMod .. " + U", hl.dsp.window.close())
 
 -- Scripts
 hl.bind("code:248", hl.dsp.exec_cmd("/usr/local/bin/toggle-screen"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("~/.config/scripts/smart-float.sh")) -- Enables smart float
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("~/.config/scripts/smart-float.sh")) -- Enables smart float
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.config/scripts/toggle-nightlight.sh")) -- Fn + <F10>
 hl.bind("XF86Fn_F", hl.dsp.exec_cmd("~/.config/scripts/toggle-ppd.sh")) -- Fn + F
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("~/.config/scripts/screenshot.sh"))
-hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("/usr/local/bin/gpu-toggle"))
+hl.bind("SUPER + ALT + G", hl.dsp.exec_cmd("/usr/local/bin/gpu-toggle")) -- GPU Toggle
 
 -- Applications
-hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("zen-browser"))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("nautilus"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("zen-browser"))
+hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("thunar"))
 hl.bind("XF86TouchpadToggle", hl.dsp.exec_cmd("blueman-manager")) -- Fn + <F6>
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar")) -- Hide/show waybar
 hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("killall -SIGUSR2 waybar")) -- Restart waybar
 hl.bind("XF86Launch1", hl.dsp.exec_cmd("waypaper")) -- Fn + <F12> Asus Key
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+hl.bind("SUPER + SHIFT + O", hl.dsp.exec_cmd("omniglyph")) -- Emoji selector
 
 -- Rofi & Custom Luanchers
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || rofi -show drun'"))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || rofi -show drun'"))
 hl.bind("SUPER + SHIFT + V", hl.dsp.exec_cmd("~/.config/rofi/clipboard/launcher.sh"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || ~/.config/rofi/musicPlayer/music-player.sh'"))
 hl.bind("SUPER + SHIFT + H", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || ~/.config/rofi/shortcuts/shortcuts.sh'")) -- Help
 
 -- Power Binds
 hl.bind("xf86poweroff", hl.dsp.exec_cmd("wlogout"))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock")) -- Fn + <F9>
+hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
--- Color Picker
+-- Color Picker (Instant Eyedropper Reimagined)
 hl.bind("ALT + SHIFT + C", hl.dsp.exec_cmd("pkill -SIGUSR1 ie-r"))
 hl.bind("ALT + SHIFT + H", hl.dsp.exec_cmd("pkill -SIGUSR2 ie-r"))
 
@@ -99,7 +100,7 @@ hl.bind(
 -- Pyprland
 hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd("pypr toggle cheatsheet"))
 hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("pypr toggle btop"))
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("pypr toggle rmpc"))
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("pypr toggle rmpc"))
 hl.bind(mainMod .. " + tab", hl.dsp.exec_cmd("pypr toggle term"))
 
 -- Move focus
@@ -121,13 +122,35 @@ hl.bind(mainMod .. " + CTRL + k", hl.dsp.window.resize({ x = 0, y = -100, relati
 hl.bind(mainMod .. " + CTRL + j", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
 
 -- Workspaces switching & moving windows
-for i = 1, 9 do
-	hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
-	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
-end
+-- for i = 1, 9 do
+-- 	hl.bind(mainMod .. " + " .. i, hl.dsp.focus({ workspace = i }))
+-- 	hl.bind(mainMod .. " + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
+-- end
 
-hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
-hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
+hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = 1 }))
+hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = 2 }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = 3 }))
+hl.bind(mainMod .. " + F", hl.dsp.focus({ workspace = 4 }))
+hl.bind(mainMod .. " + G", hl.dsp.focus({ workspace = 5 }))
+hl.bind(mainMod .. " + Q", hl.dsp.focus({ workspace = 6 }))
+hl.bind(mainMod .. " + W", hl.dsp.focus({ workspace = 7 }))
+hl.bind(mainMod .. " + E", hl.dsp.focus({ workspace = 8 }))
+hl.bind(mainMod .. " + R", hl.dsp.focus({ workspace = 9 }))
+hl.bind(mainMod .. " + T", hl.dsp.focus({ workspace = 10 }))
+
+hl.bind("SUPER + SHIFT + A", hl.dsp.window.move({ workspace = 1 }))
+hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = 2 }))
+hl.bind("SUPER + SHIFT + D", hl.dsp.window.move({ workspace = 3 }))
+hl.bind("SUPER + SHIFT + F", hl.dsp.window.move({ workspace = 4 }))
+hl.bind("SUPER + SHIFT + G", hl.dsp.window.move({ workspace = 5 }))
+hl.bind("SUPER + SHIFT + Q", hl.dsp.window.move({ workspace = 6 }))
+hl.bind("SUPER + SHIFT + W", hl.dsp.window.move({ workspace = 7 }))
+hl.bind("SUPER + SHIFT + E", hl.dsp.window.move({ workspace = 8 }))
+hl.bind("SUPER + SHIFT + R", hl.dsp.window.move({ workspace = 9 }))
+hl.bind("SUPER + SHIFT + T", hl.dsp.window.move({ workspace = 10 }))
+
+-- hl.bind(mainMod .. " + 0", hl.dsp.focus({ workspace = 10 }))
+-- hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
@@ -138,12 +161,5 @@ hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Emergency Hard Exit
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exit())
 
--- Temporary Hyprshutdown Fix
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd('hyprshutdown --no-exit && hyprctl dispatch "hl.dsp.exit()"'))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprshutdown"))
-
 -- Hardware Switches
 hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("hyprctl dispatch dpms on"), { locked = true })
-
--- To be binded
--- bind = SUPER, P, exec, notify-send "Display toggled"
