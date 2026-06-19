@@ -8,7 +8,7 @@ _a rice that's beautiful and productive<3_
 
 ---
 
-![banner](assets/banner.png)
+![banner](assets/preview.png)
 
 ---
 ## Preview
@@ -18,8 +18,6 @@ _a rice that's beautiful and productive<3_
 ![nvim](assets/nvim.png)
 
 ![browser](assets/browser.png)
-
-![lock](assets/hyprlock.jpg)
 
 ---
 
