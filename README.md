@@ -2,7 +2,7 @@
 
 # 🌸 hyprbliss
 
-_a rice that's beautiful and productive<3_
+_a rice that's simple beautiful and productive<3_
 
 </div>
 
