@@ -15,6 +15,11 @@ _a rice that's simple beautiful and productive<3_
 
 ![Desktop](assets/preview2.png)
 
+Programs shown in the image:
+rmpc
+nvim
+rofi
+
 ---
 
 hyprbliss is my personal rice designed for zenbook duo, it's simple, looks good and works well for my workflow.
