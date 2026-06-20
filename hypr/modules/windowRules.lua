@@ -8,7 +8,7 @@
 -- Kitty
 hl.window_rule({
 	match = { class = "kitty" },
-	opacity = "1.0 0.9", -- Active Inactive fullscreen
+	opacity = "1.0 0.8", -- Active Inactive fullscreen
 })
 
 -- Ghostty
@@ -158,12 +158,12 @@ hl.window_rule({
 })
 
 -- Waydroid
-hl.window_rule({
-	match = { class = "Waydroid" },
-	float = true,
-	center = true,
-	size = { "(monitor_w*0.5)", "(monitor_h*0.95)" },
-})
+-- hl.window_rule({
+-- 	match = { class = "Waydroid" },
+-- 	float = true,
+-- 	center = true,
+-- 	size = { "(monitor_w*0.5)", "(monitor_h*0.95)" },
+-- })
 
 -- LocalSend
 hl.window_rule({

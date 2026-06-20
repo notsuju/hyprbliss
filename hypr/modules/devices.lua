@@ -8,7 +8,7 @@ hl.device({ name = "compx-atk-x1-se-nearlink-system-control", enabled = false })
 hl.device({ name = "compx-atk-x1-se-nearlink-consumer-control", enabled = false })
 hl.device({ name = "compx-atk-x1-se-nearlink", enabled = false })
 
--- Touchscreen Mapping Fix
+-- Touchscreen Mapping
 hl.device({ name = "elan9009:00-04f3:2c1b", output = "DP-1" })
 hl.device({ name = "elan9008:00-04f3:2c1a", output = "eDP-1" })
 

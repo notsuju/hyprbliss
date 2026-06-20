@@ -9,7 +9,7 @@
 hl.curve("bliss", { type = "bezier", points = { { 0.05, 0.9 }, { 0.1, 1 } } })
 
 -- Animation Behaviours
-hl.animation({ leaf = "windows", enabled = true, speed = 7, bezier = "bliss" })
+hl.animation({ leaf = "windows", enabled = true, speed = 6, bezier = "bliss" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 7, bezier = "bliss", style = "popin 80%" })
 hl.animation({ leaf = "border", enabled = true, speed = 10, bezier = "bliss" })
 hl.animation({ leaf = "borderangle", enabled = true, speed = 8, bezier = "bliss" })

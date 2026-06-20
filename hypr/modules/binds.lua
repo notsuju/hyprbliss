@@ -8,15 +8,9 @@
 -- KEYBINDS (Includes Specific keybinds for Asus Zenbook Duo 14)
 local mainMod = "SUPER"
 
--- Toggle keybinds
--- hl.bind("XF86WebCam", hl.dsp.submap("clean"))
--- hl.define_submap("clean", function()
--- 	hl.bind("XF86WebCam", hl.dsp.submap("reset"))
--- end)
-
--- Hyprland Native
+-- Hyprland
 hl.bind(mainMod .. " + B", hl.dsp.window.pseudo())
-hl.bind(mainMod .. " + U", hl.dsp.window.close())
+hl.bind(mainMod .. " + Y", hl.dsp.window.close())
 
 -- Scripts
 hl.bind("code:248", hl.dsp.exec_cmd("/usr/local/bin/toggle-screen"))
@@ -30,7 +24,7 @@ hl.bind("SUPER + ALT + G", hl.dsp.exec_cmd("/usr/local/bin/gpu-toggle")) -- GPU 
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("thunar"))
 hl.bind("XF86TouchpadToggle", hl.dsp.exec_cmd("blueman-manager")) -- Fn + <F6>
-hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + U", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("killall -SIGUSR1 waybar")) -- Hide/show waybar
 hl.bind(mainMod .. " + CTRL + B", hl.dsp.exec_cmd("killall -SIGUSR2 waybar")) -- Restart waybar
 hl.bind("XF86Launch1", hl.dsp.exec_cmd("waypaper")) -- Fn + <F12> Asus Key
@@ -47,9 +41,14 @@ hl.bind("SUPER + SHIFT + H", hl.dsp.exec_cmd("sh -c 'pkill -x rofi || ~/.config/
 hl.bind("xf86poweroff", hl.dsp.exec_cmd("wlogout"))
 hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
--- Color Picker (Instant Eyedropper Reimagined)
-hl.bind("ALT + SHIFT + C", hl.dsp.exec_cmd("pkill -SIGUSR1 ie-r"))
-hl.bind("ALT + SHIFT + H", hl.dsp.exec_cmd("pkill -SIGUSR2 ie-r"))
+-- Plugins
+-- hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd("hyprctl dispatch hyprexpo:expo toggle")) (Broken)
+
+-- Pyprland(Scratchpads)
+hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd("pypr toggle cheatsheet"))
+hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("pypr toggle btop"))
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("pypr toggle rmpc"))
+hl.bind(mainMod .. " + tab", hl.dsp.exec_cmd("pypr toggle term"))
 
 -- Volume and Brightness
 hl.bind(
@@ -93,15 +92,6 @@ hl.bind(
 	hl.dsp.exec_cmd("brightnessctl -d asus_screenpad set 10%-"),
 	{ repeating = true, locked = true }
 )
-
--- Plugins
--- hl.bind(mainMod .. " + grave", hl.dsp.exec_cmd("hyprctl dispatch hyprexpo:expo toggle")) (Broken)
-
--- Pyprland
-hl.bind(mainMod .. " + slash", hl.dsp.exec_cmd("pypr toggle cheatsheet"))
-hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("pypr toggle btop"))
-hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("pypr toggle rmpc"))
-hl.bind(mainMod .. " + tab", hl.dsp.exec_cmd("pypr toggle term"))
 
 -- Move focus
 hl.bind(mainMod .. " + h", hl.dsp.focus({ direction = "l" }))
